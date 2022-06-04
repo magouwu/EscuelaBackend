@@ -2,14 +2,16 @@ const express = require('express')
 const mongoose = require('mongoose')
 var { expressjwt: ejwt } = require("express-jwt");
 const endpoints = require('./user.controller')
+const cors = require('cors')
 const User = require('./User')
 const jwt = require('jsonwebtoken')
 
 const app = express()
 const port = 3050
 
+app.use(cors())
 app.use(express.json())
-                                                                            mongoose.connect('mongodb+srv://magouwu:Katieteamo@cluster0.199wf.mongodb.net/auth?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://magouwu:Katieteamo@cluster0.199wf.mongodb.net/auth?retryWrites=true&w=majority')
 
 
 

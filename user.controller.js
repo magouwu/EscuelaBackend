@@ -46,7 +46,7 @@ const endpoints = {
                 const isMatch = await bcrypt.compare(body.password, user.password)
                 if(isMatch){
                     const signed = signToken(user._id)
-                    res.status(200).send(signed)
+                    res.status(200).send({ token: signed })
                     console.log(`User: ${user.username} is connected`)
                 }else{
                     res.send('User or password are invalid')
