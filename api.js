@@ -11,7 +11,7 @@ const port = 3050
 
 app.use(cors())
 app.use(express.json())
-mongoose.connect('mongodb+srv://magouwu:Katieteamo@cluster0.199wf.mongodb.net/auth?retryWrites=true&w=majority')
+
 
 
 
